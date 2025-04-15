@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -115,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">The Strongest NCAA Gymnastics Conference: Breaking Down the Data</h1>
+      <div class="quarto-title-block"><div><h1 class="title">The Strongest NCAA Gymnastics Conference: Breaking Down the Data</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
                                 <div class="quarto-categories">
                 <div class="quarto-category">ncaa</div>
                 <div class="quarto-category">gymnastics</div>
@@ -156,29 +190,102 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>NCAA Gymnastics has been dominated by the SEC for years. As the 2025 season comes to a close, it is clear that the Southeastern Conference (SEC) continues to be a powerhouse in collegiate gymnastics. But how do other conferences compare? Which conference really is the strongest when we look closely at the numbers?</p>
-<p>Using data from the 2025 season, we can break down the rankings based on each teams National Qualifying Score (NQS) and see which conferences are competitive.</p>
-<p>Based on each teams NQS this graph shows which conferences have the most teams ranked in the top 36. These teams represent the highest level of competition and are a major indicator of which conference is the strongest.</p>
-<p><img src="top36.png" style="background-color: white; display: block; margin: 0 auto; " width="100%"></p>
-<p>Clearly, the Big Ten leads with the most teams in the top 36 (10). But does the number of teams tell us the whole story?</p>
-<p>While the SEC has 2 fewer teams in the Big Ten, it remains a powerhouse in NCAA Gymnastics. The SEC teams often performs at a higher level than other teams. They are known for being home to many top-tier athletes and programs that dominate national competitions.</p>
-<p>However, it is also clear that the Big Ten has become a strong contender in recent years. The Pac-12 also has maintained a consistent presence in NCAA Gymnastics and competes at a high level.</p>
-<p>Let’s take a closer look at each teams National Qualifying Scores.</p>
-<p><img src="NQSdotplot.png" width="100%"></p>
-<p>This graph compares the National Qualifying Scores of the top 36 teams across each conference. Each dot shows us one of these top teams. This gives us a good sense of how these teams are actually performing and whether certain conferences achieve higher scores in competition.</p>
-<p>It is noticeable that the dots representing SEC teams are at the top of the graph. This indicates that SEC teams are consistently producing some of the highest NQS. While the SEC doesn’t have the most teams in the top 36 (the Big Ten has a couple more), their teams seem to outperform those from other conferences in terms of scores. This in and of itself shows their dominance.</p>
-<p>The Big Ten, on the other hand, has more teams in the top 36, but tends to score lower. This suggests that while they may have a larger representation they don’t always perform as well.</p>
-<p>We can also see that in some conferences like the Big 12 and Pac-12 they have a few teams with high scores but lack consistency. And other conferences like the Big West and Mountain West just score lower overall. This is a good represntation of consistency within conferences and shows which teams within each conference are dominating NCAA gymnastics right now.</p>
-<p>Now, we can dial in on the strongest teams.</p>
-<p><img src="grouped.png" style="width:100%"></p>
-<p>This graph shows the top 10 teams by their average team score in the 2025 season grouped by their conference. The SEC continues to dominate with 5 teams in the top 10. The Pac-12 has 3 teams, while the Big Ten and Big 12 each have 1 team in the top 10.</p>
-<p>While the average scores are overall quite similar, the SEC’s strong representation shows their consistent performances at the very highest level. This also gives us a better look at how the Big Ten lags behind when it comes to the very best of the best in scores.</p>
-<p>It is evident from this data that it is true, the SEC continues to dominate NCAA Gymnastics. Although the Big Ten has more teams in the top half of NCAA teams, their scores trend lower overall. The Pac-12 and Big 12 have very strong teams but they still don’t match the pattern of quality teams we see in the Southeastern Conference.</p>
-<p>As the season draws to a close with nationals coming up, it will be interesting to see who, if anyone, catches up. But for now, it is clear that based on the 2025 gymnastics season the SEC remains the top conference in NCAA Gymnastics.</p>
+<p>NCAA Gymnastics has been dominated by the SEC for years.</p>
+<details>
+<summary>
+Click to view code
+</summary>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>gymnastics_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"ncaa_gymnastics_teams.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 86 Columns: 6</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): Team
+dbl (5): Rank, Team NQS, Div, Avg, High
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>top_teams <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="st">"Team NQS"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">36</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>conferences <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"SEC"</span>, <span class="st">"Big 12"</span>, <span class="st">"SEC"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"SEC"</span>, </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"SEC"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"SEC"</span>, <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big 12"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Pac-12"</span>, <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"WAC"</span>, <span class="st">"Big Ten"</span>, </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Pac-12"</span>, <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Mountain West"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big 12"</span>, </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Big 12"</span>, <span class="st">"Mountain West"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big West"</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>top_teams<span class="sc">$</span>Conference <span class="ot">&lt;-</span> conferences</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>gymnastics_data <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(top_teams <span class="sc">%&gt;%</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(Team, Conference), <span class="at">by =</span> <span class="st">"Team"</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>conference_counts <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Team <span class="sc">%in%</span> top_teams<span class="sc">$</span>Team) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Conference, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(conference_counts, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(Conference, <span class="sc">-</span>n), <span class="at">y =</span> n, <span class="at">fill =</span> Conference)) <span class="sc">+</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Which NCAA Gymnastics Conference Is the Strongest?"</span>,</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Based on number of teams ranked in the top 36 by National Qualifying Score (NQS)"</span>,</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Conference"</span>,</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Top-36 Teams"</span>,</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Author: Lily Neneman | Source: RoadToNationals.com"</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>)</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+<!-- -->
 
-</main> <!-- /main -->
+
+</details></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -266,6 +373,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -595,7 +753,190 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "The Strongest NCAA Gymnastics Conference: Breaking Down the Data"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Lily Neneman"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> '2025-04-01'</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [ncaa, gymnastics, SEC]</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "top36.png"</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>NCAA Gymnastics has been dominated by the SEC for years. As the 2025 season comes to a close, it is clear that the Southeastern Conference (SEC) continues to be a powerhouse in collegiate gymnastics. But how do other conferences compare? Which conference really is the strongest when we look closely at the numbers?</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>Using data from the 2025 season, we can break down the rankings based on each teams National Qualifying Score (NQS) and see which conferences are competitive.</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>Based on each teams NQS this graph shows which conferences have the most teams ranked in the top 36. These teams represent the highest level of competition and are a major indicator of which conference is the strongest.</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, echo=TRUE, message=FALSE, warning=FALSE, results= 'hide'}</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="in">knitr:: opts_chunk$set(</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="in">  echo = TRUE,</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="in">  message = FALSE,</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="in">  warning = FALSE,</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="in">  results = 'hide'</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="in">library(dplyr)</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="in">library(readr)</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>gymnastics_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"ncaa_gymnastics_teams.csv"</span>)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>top_teams <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="st">`</span><span class="at">Team NQS</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">36</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>conferences <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"SEC"</span>, <span class="st">"Big 12"</span>, <span class="st">"SEC"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"SEC"</span>, </span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"SEC"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"SEC"</span>, <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big 12"</span>,</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Pac-12"</span>, <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"WAC"</span>, <span class="st">"Big Ten"</span>, </span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Pac-12"</span>, <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Mountain West"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big 12"</span>, </span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Big 12"</span>, <span class="st">"Mountain West"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big West"</span>)</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>top_teams<span class="sc">$</span>Conference <span class="ot">&lt;-</span> conferences</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>gymnastics_data <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(top_teams <span class="sc">%&gt;%</span> <span class="fu">select</span>(Team, Conference), <span class="at">by =</span> <span class="st">"Team"</span>)</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>conference_counts <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Team <span class="sc">%in%</span> top_teams<span class="sc">$</span>Team) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Conference, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>top36_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(conference_counts, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(Conference, <span class="sc">-</span>n), <span class="at">y =</span> n, <span class="at">fill =</span> Conference)) <span class="sc">+</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Which NCAA Gymnastics Conference Is the Strongest?"</span>, </span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Based on number of teams ranked in the top 36 by National Qualifying Score (NQS)"</span>, </span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Conference"</span>, </span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Top-36 Teams"</span>, </span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Author: Lily Neneman | Source: RoadToNationals.com"</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>, </span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>), </span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>), </span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>)</span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"top36.png"</span>, <span class="at">plot =</span> top36_plot, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">300</span>, <span class="at">bg =</span> <span class="st">"white"</span>)</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>&lt;img src="top36.png" style="background-color: white; display: block; margin: 0 auto; " width="100%"/&gt;</span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>Clearly, the Big Ten leads with the most teams in the top 36 (10). But does the number of teams tell us the whole story?</span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>While the SEC has 2 fewer teams in the Big Ten, it remains a powerhouse in NCAA Gymnastics. The SEC teams often performs at a higher level than other teams. They are known for being home to many top-tier athletes and programs that dominate national competitions.</span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>However, it is also clear that the Big Ten has become a strong contender in recent years. The Pac-12 also has maintained a consistent presence in NCAA Gymnastics and competes at a high level.</span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>Let's take a closer look at each teams National Qualifying Scores.</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>top_teams <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="st">`</span><span class="at">Team NQS</span><span class="st">`</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">36</span>)</span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>conferences <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"SEC"</span>, <span class="st">"Big 12"</span>, <span class="st">"SEC"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"SEC"</span>, </span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"SEC"</span>, <span class="st">"Pac-12"</span>, <span class="st">"Pac-12"</span>, <span class="st">"SEC"</span>, <span class="st">"SEC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big 12"</span>,</span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Pac-12"</span>, <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"WAC"</span>, <span class="st">"Big Ten"</span>, </span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Pac-12"</span>, <span class="st">"ACC"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Mountain West"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big 12"</span>, </span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Big 12"</span>, <span class="st">"Mountain West"</span>, <span class="st">"Big Ten"</span>, <span class="st">"Big West"</span>)</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>top_teams<span class="sc">$</span>Conference <span class="ot">&lt;-</span> conferences</span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a>gymnastics_data <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(top_teams <span class="sc">%&gt;%</span> <span class="fu">select</span>(Team, Conference), <span class="at">by =</span> <span class="st">"Team"</span>)</span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>top_data <span class="ot">&lt;-</span> gymnastics_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Team <span class="sc">%in%</span> top_teams<span class="sc">$</span>Team)</span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>team_scores <span class="ot">&lt;-</span> top_teams <span class="sc">%&gt;%</span></span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Team, Conference, <span class="st">`</span><span class="at">Team NQS</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">NQS =</span> <span class="st">`</span><span class="at">Team NQS</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Conference, <span class="fu">desc</span>(NQS)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Team =</span> <span class="fu">factor</span>(Team, <span class="at">levels =</span> <span class="fu">unique</span>(Team)))</span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a>top_scores_to_label <span class="ot">&lt;-</span> team_scores <span class="sc">%&gt;%</span> </span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(NQS)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>) </span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>NQSdotplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(team_scores, <span class="fu">aes</span>(<span class="at">x =</span> Conference, <span class="at">y =</span> NQS, <span class="at">color =</span> Conference)) <span class="sc">+</span></span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"NQS Distribution Across Conferences"</span>,</span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Comparing the National Qualifying Scores of NCAA Gymnastics Teams"</span>,</span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Conference"</span>,</span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"National Qualifying Score (NQS)"</span>,</span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Author: Lily Neneman | Source: RoadToNationals.com"</span></span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(</span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">16</span>),  </span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)  </span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> top_scores_to_label, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(NQS, <span class="dv">2</span>)), </span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"black"</span>)</span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"NQSdotplot.png"</span>, <span class="at">plot =</span> NQSdotplot, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">300</span>, <span class="at">bg =</span> <span class="st">"white"</span>)</span>
+<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a>&lt;img src="NQSdotplot.png" width="100%"/&gt;</span>
+<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a>This graph compares the National Qualifying Scores of the top 36 teams across each conference. Each dot shows us one of these top teams. This gives us a good sense of how these teams are actually performing and whether certain conferences achieve higher scores in competition.</span>
+<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a>It is noticeable that the dots representing SEC teams are at the top of the graph. This indicates that SEC teams are consistently producing some of the highest NQS. While the SEC doesn't have the most teams in the top 36 (the Big Ten has a couple more), their teams seem to outperform those from other conferences in terms of scores. This in and of itself shows their dominance.</span>
+<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a>The Big Ten, on the other hand, has more teams in the top 36, but tends to score lower. This suggests that while they may have a larger representation they don't always perform as well.</span>
+<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a>We can also see that in some conferences like the Big 12 and Pac-12 they have a few teams with high scores but lack consistency. And other conferences like the Big West and Mountain West just score lower overall. This is a good represntation of consistency within conferences and shows which teams within each conference are dominating NCAA gymnastics right now.</span>
+<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a>Now, we can dial in on the strongest teams.</span>
+<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a>top_10_data <span class="ot">&lt;-</span> top_15_data <span class="sc">%&gt;%</span> </span>
+<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">10</span>, Avg)   </span>
+<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a>bar <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(top_10_data, <span class="fu">aes</span>(<span class="at">x =</span> Team, <span class="at">y =</span> Avg, <span class="at">color =</span> Conference)) <span class="sc">+</span></span>
+<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(Avg, <span class="dv">2</span>)), </span>
+<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="fl">1.5</span>,  </span>
+<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="fl">0.5</span>,  </span>
+<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"red"</span>, </span>
+<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">2</span>, </span>
+<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.8</span>)) <span class="sc">+</span> </span>
+<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Conference, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span> </span>
+<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 10 Teams Grouped by Conference"</span>,</span>
+<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Comparing teams based on their Average Team Score"</span>,</span>
+<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Team"</span>,</span>
+<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Score"</span>,</span>
+<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Author: Lily Neneman | Source: RoadToNationals.com"</span></span>
+<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(</span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">20</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">10</span>), </span>
+<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),  </span>
+<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)  </span>
+<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"grouped.png"</span>, <span class="at">plot =</span> bar, <span class="at">bg =</span> <span class="st">"white"</span>, <span class="at">width =</span> <span class="dv">10</span>, <span class="at">height =</span> <span class="dv">8</span>)</span>
+<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a>&lt;img src="grouped.png" style="width:100%"/&gt;</span>
+<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a>This graph shows the top 10 teams by their average team score in the 2025 season grouped by their conference. The SEC continues to dominate with 5 teams in the top 10. The Pac-12 has 3 teams, while the Big Ten and Big 12 each have 1 team in the top 10.</span>
+<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a>While the average scores are overall quite similar, the SEC's strong representation shows their consistent performances at the very highest level. This also gives us a better look at how the Big Ten lags behind when it comes to the very best of the best in scores.</span>
+<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a>It is evident from this data that it is true, the SEC continues to dominate NCAA Gymnastics. Although the Big Ten has more teams in the top half of NCAA teams, their scores trend lower overall. The Pac-12 and Big 12 have very strong teams but they still don't match the pattern of quality teams we see in the Southeastern Conference.</span>
+<span id="cb9-186"><a href="#cb9-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-187"><a href="#cb9-187" aria-hidden="true" tabindex="-1"></a>As the season draws to a close with nationals coming up, it will be interesting to see who, if anyone, catches up. But for now, it is clear that based on the 2025 gymnastics season the SEC remains the top conference in NCAA Gymnastics.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 
